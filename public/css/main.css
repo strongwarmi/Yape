@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto' !important;
+    
+}
+
+.text-gris {
+    color: #8f8f8f;
+}
+.btn-yellow{
+    background-color: #fbd43b;
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    margin: 10% 0;
+}
+.item img {
+    width: 70% !important;    
+    display: inline !important;
+}
