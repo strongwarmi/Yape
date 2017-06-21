@@ -9,15 +9,34 @@ input[type="checkbox"] {
     border: 1px solid #c8c6c6;
     height: 30px;
     width: 30px;
-    border-radius: 2px;
-    outline: none;    
+    border-radius: 5px;
+    outline: none;
+    margin-top: 20px;
 }
 
-input[type="checkbox"]:checked {
+.text-gris {
+    color: #8f8f8f;
+}
+
+.text-turqueza {
+    color: #00c3a3;
+}
+
+.mt {
+    margin-top: 10%;
+}
+
+.bg-yellow {
+    background-color: #fbd43b;
+}
+
+input[placeholder="Mes"],
+input[placeholder="Año"] {
+    height: 50px;
     outline: none;
-    background-color: #00c3a3;
-    color: red;
-    content: "s";
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .bottom input {
@@ -29,19 +48,12 @@ input[type="checkbox"]:checked {
 }
 
 .bottom {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #999;
 }
 
-.phone {
+.icono {
     height: 50px;
-}
-
-.text-gris {
-    color: #8f8f8f;
-}
-
-.text-turqueza {
-    color: #00c3a3;
+    padding-bottom: 10px;
 }
 
 .btn-yellow {

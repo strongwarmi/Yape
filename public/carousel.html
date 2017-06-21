@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yape</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="container mt">
+            <div class="row fadeOut owl-carousel owl-theme text-center">
+                <div class="item">
+                    <img src="assets/icons/icon-people.png" alt="Paga a tus amigos">
+                    <h1><strong>Paga a tus amigos</strong></h1>
+                    <h2 class="text-gris">Paga a quien quieras desde donde quieras, sin usar efectivo.</h2>
+                </div>
+                <div class="item">
+                    <img src="assets/icons/happy-person.png" alt="Sin número de cuenta">
+                    <h1><strong>Sin número de cuenta</strong></h1>
+                    <h2 class="text-gris">Elige a quien pagar desde tu lista de contactos.</h2>
+                </div>
+                <div class="item">
+                    <img src="assets/icons/group-people.png" alt="Gratis y seguro">
+                    <h1><strong>Gratis y seguro</strong></h1>
+                    <h2 class="text-gris">La transferencia es inmediata y gratuita de una cuenta a otra.</h2>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-yellow">REGISTRARME</button>
+                </div>
+            </div>
+        </div>
+        <div id="validaNumero" class="container mt text-center">
+            <div class="row">
+                <img src="assets/icons/phone.png">
+                <h1><strong>Para comenzar validaremos tu número</strong></h1>
+                <h2 class="text-gris">Recibirás un SMS con un código de validación</h2>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-12">
+                    <div class="col-xs-3 bottom">
+                        <img class="icono" src="assets/icons/phoneandnumber.png">
+                    </div>
+                    <div class="col-xs-9 bottom">
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="checkbox" id="terminos">
+                <label for="terminos">
+                      <h3 class="text-gris">
+                         Acepto los <span class="text-turqueza">términos y condiciones </span>
+                      </h3>
+                </label>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <button class="btn btn-yellow">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+        <div id="validaCodigo" class="container mt text-center">
+            <div class="row">
+                <img src="assets/icons/message.png">
+                <h1><strong>Ahora ingresa tu código</strong></h1>
+                <h2 class="text-gris">Enviamos un SMS con el código de validación al número xxx</h2>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-12">
+                    <div class="col-xs-1 bottom">
+                        <img class="icono" src="assets/icons/lock.png">
+                    </div>
+                    <div class="col-xs-11 bottom">
+                        <input type="text" placeholder="-   -   -   -   -">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="text-gris">Reintentar en <i class="glyphicon glyphicon-time"></i> xx</h4>
+            </div>
+        </div>
+        <div id="registroUsuario" class="container mt text-center">
+            <div class="row">
+                <img src="assets/icons/lockone.png">
+                <h1>Crea tu usuario Yape</h1>
+                <h2 class="text-gris">Ingresa un nombre, email y clave de usuario</h2>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-12">
+                    <div class="col-xs-1 bottom text-center">
+                        <img class="icono" src="assets/icons/user.png">
+                    </div>
+                    <div class="col-xs-11 bottom">
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="col-xs-12 mt">
+                    <div class="col-xs-1 bottom">
+                        <img class="icono" src="assets/icons/message-gray.png">
+                    </div>
+                    <div class="col-xs-11 bottom">
+                        <input type="text" placeholder="correo@ejemplo.com">
+                    </div>
+                </div>
+                <div class="col-xs-12 mt">
+                    <div class="col-xs-1 bottom">
+                        <img class="icono" src="assets/icons/lock.png">
+                    </div>
+                    <div class="col-xs-11 bottom">
+                        <input type="text" placeholder="Ingresa clave de 6 dígitos">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="text-gris">Cuida esta clave como oro, es tu acceso a Yape.</h4>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <button class="btn btn-yellow">CREAR CUENTA</button>
+                </div>
+            </div>
+        </div>
+        <div id="gracias" class="text-center bg-yellow">
+            <div class="row">
+                <img src="assets/icons/check.png"><br>
+                <strong><h1>¡Bien!<br>Ahora puedes usar Yape</h1></strong>
+            </div>
+        </div>
+        <div id="registroTarjeta" class="container mt">
+            <div class="row text-center">
+                <img src="assets/icons/bcp-logo.png">
+            </div>
+            <div class="row text-center">
+                <h1><strong>Registra tu tarjeta débito BCP</strong></h1>
+            </div>
+            <div class="row text-center">
+                <h2 class="text-gris">Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles.</h2>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-1 bottom text-center">
+                    <img class="icono" src="assets/icons/card.png">
+                </div>
+                <div class="col-xs-11 bottom">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="row">
+                <h4 class="text-center text-turqueza"><img class="icono" src="assets/icons/scan.png"> Escanear tarjeta</h4>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-6">
+                    <h3 class="text-gris">
+                        Fecha de vencimiento
+                    </h3>
+                </div>
+                <div class="col-xs-6">
+                    <input class="bottom text-center" type="text" placeholder="Mes">/<input class="text-center bottom" type="text" placeholder="Año">
+                </div>
+            </div>
+            <div class="row mt text-center">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <button class="btn btn-yellow">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+        <div id="claveTarjeta" class="container mt">
+            <div class="row text-center">
+                <img src="assets/icons/bcp-logo.png">
+            </div>
+            <div class="row text-center">
+                <h1><strong>Ingresa la clave de tu tarjeta</strong></h1><br>
+                <h2 class="text-gris">Tarjeta ****1234</h2>
+            </div>
+            <div class="row mt">
+                <div class="col-xs-12">
+                    <div class="col-xs-1 bottom text-center">
+                        <img class="icono" src="assets/icons/lock.png">
+                    </div>
+                    <div class="col-xs-11 bottom">
+                        <input type="password" placeholder="-   -   -   -   -">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt text-center">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <button class="btn btn-yellow">REGISTRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/models/number.js"></script>
+    <script src="js/components/Home.js"></script>
+    <script src="js/components/ValidaNumero.js"></script>
+    <script src="js/components/ValidaCodigo.js"></script>
+    <script src="js/components/RegistroUsuario.js"></script>
+    <script src="js/components/Gracias.js"></script>
+    <script src="js/components/RegistroTarjeta.js"></script>
+    <script src="js/components/PerfilUsuario.js"></script>
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
