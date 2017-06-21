@@ -9,8 +9,8 @@ Yape es la nueva aplicación del Banco de Crédito del Perú, con la que tendrá
 4. Estructura con buenas prácticas (HTML,CSS,JS)
 
 ## Librerias externas
-Se está incluyendo las siguientes librerias y framework:
+He utilizado las siguientes librerias y framework:
 
-- bootstrap ([http://getbootstrap.com/](http://getbootstrap.com/))
+- Bootstrap ([http://getbootstrap.com/](http://getbootstrap.com/))
 - OwlCarousel ([https://owlcarousel2.github.io/OwlCarousel2/](https://owlcarousel2.github.io/OwlCarousel2/))
-- jquery ([https://jquery.com/](https://jquery.com/))
+- Jquery ([https://jquery.com/](https://jquery.com/))

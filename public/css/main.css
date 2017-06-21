@@ -14,10 +14,12 @@ input[type="checkbox"] {
     margin-top: 20px;
 }
 
+.text-white {
+    color: #fff;
+}
 .text-gris {
     color: #8f8f8f;
 }
-
 .text-turqueza {
     color: #00c3a3;
 }
@@ -28,6 +30,14 @@ input[type="checkbox"] {
 
 .bg-yellow {
     background-color: #fbd43b;
+}
+
+.bg-lila {
+    background-color: #451e36;
+}
+
+.bg-morado {
+    background-color: #38052a;
 }
 
 input[placeholder="Mes"],

@@ -10,34 +10,37 @@ const render = (root) => {
         root.append(ValidaNumero(_ => {
             render(root);
         }));
-    }else if (state.screen == "3") {
+    } else if (state.screen == "3") {
         root.empty();
         root.append(ValidaCodigo(_ => {
             render(root);
         }));
-    }else if (state.screen == "4") {
+    } else if (state.screen == "4") {
         root.empty();
         root.append(RegistroUsuario(_ => {
             render(root);
         }));
-    }else if (state.screen == "5") {
+    } else if (state.screen == "5") {
         root.empty();
         root.append(Gracias(_ => {
             render(root);
         }));
-    }else if (state.screen == "6") {
+    } else if (state.screen == "6") {
         root.empty();
         root.append(RegistroTarjeta(_ => {
             render(root);
         }));
-    }else if (state.screen == "7") {
+    } else if (state.screen == "7") {
         root.empty();
         root.append(ClaveTarjeta(_ => {
             render(root);
         }));
+    } else if (state.screen == "8") {
+        root.empty();
+        root.append(PerfilUsuario(_ => {
+            render(root);
+        }));
     }
-    
-
 }
 
 const state = {
