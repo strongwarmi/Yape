@@ -2,8 +2,46 @@ body {
     font-family: 'Roboto' !important;
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #c8c6c6;
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+    outline: none;    
+}
+
+input[type="checkbox"]:checked {
+    outline: none;
+    background-color: #00c3a3;
+    color: red;
+    content: "s";
+}
+
+.bottom input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: 0;
+    text-align: center;
+}
+
+.bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.phone {
+    height: 50px;
+}
+
 .text-gris {
     color: #8f8f8f;
+}
+
+.text-turqueza {
+    color: #00c3a3;
 }
 
 .btn-yellow {
@@ -15,7 +53,7 @@ body {
 }
 
 .item img {
-    width: 70% !important;
+    width: 65% !important;
     display: inline !important;
 }
 
