@@ -28,7 +28,6 @@ const ValidaNumero = (update) => {
     colBtn.append(btn);
     divBtn.append(colBtn);
 
-
     container.append(title);
     container.append(divPhone);
     container.append(divCheck);
@@ -37,7 +36,7 @@ const ValidaNumero = (update) => {
     input.on('keyup', () => {
         if (input.val().length <= 0) {
             btn.attr("disabled", true);
-        } 
+        }
     });
 
     check.on('change', () => {
@@ -50,6 +49,11 @@ const ValidaNumero = (update) => {
 
     btn.on('click', (e) => {
         e.preventDefault();
+        $.post("http://localhost:3000/api/registerNumber",
+            {
+              phone: input.val(),
+              terms: "true"
+            });
         state.screen = "3";
         getTelefono = input.val();
         update();
