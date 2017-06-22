@@ -22,13 +22,13 @@ const ValidaCodigo = (update) => {
     container.append(divCode);
     container.append(divTimer);
 
-  var repite =  setInterval(function(){
+  /*var repite =  setInterval(function(){*/
         var contador = parseInt(timer.text()),
             tiempo = setInterval(function(){
                     contador = contador-1;
                     timer.text(contador);
                         if(contador == -1){
-                            clearInterval(tiempo);
+                            //clearInterval(tiempo);
                             timer.text(21);
                             $.post("http://localhost:3000/api/resendCode",
                                 {
@@ -36,15 +36,16 @@ const ValidaCodigo = (update) => {
                                 },(response)=>{
                                   getCode=response.data;
                                   console.log(getCode);
-                                  clearInterval(repite);
+                                  /*clearInterval(repite);*/
                                 });
                         }
             },1000);
-    },1000);
+    /*},1000);*/
 
     input.on('keyup',()=>{
       if (parseInt(input.val()) == getCode) {
-            repite= "";
+            /*repite= "";*/
+          clearInterval(tiempo);
             state.screen = "4";
             update();
       }
