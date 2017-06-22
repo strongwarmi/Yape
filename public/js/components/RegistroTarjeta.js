@@ -1,5 +1,6 @@
 'use strict';
 const RegistroTarjeta = (update) => {
+    $("body").removeClass("bg-yellow");
     const container = $('<div id="registroTarjeta" class="container mt text-center"></div>');
     const title = $('<div class="row"><img src="assets/icons/bcp-logo.png"><h1>Registra tu tarjeta débito BCP</h1><h2 class="text-gris">Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles.</h2></div>');
 
@@ -44,6 +45,9 @@ const RegistroTarjeta = (update) => {
 
     $(btn).on('click', (e) => {
         e.preventDefault();
+ /*       cardNumber:
+            cardMonth
+        cardYear*/
         state.screen = "7";
         update();
     });
