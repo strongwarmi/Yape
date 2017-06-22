@@ -1,7 +1,7 @@
 'use strict';
 const PerfilUsuario = () => {
     const container = $('<div id="gracias" class="container-fluid text-center bg-lila text-white">');
-    const title = $('<div class="row"><img class="mt" src="assets/icons/happy-face.png"><h1>Hola</h1></div>');
+    const title = $('<div class="row"><img class="mt" src="assets/icons/happy-face.png"><h1>Hola '+ usuario +'</h1></div>');
     const subtitle = $('<div class="row"><h4 class="text-turqueza"><img class="icono" src="assets/icons/eye.png"> Mostrar saldo</h4></div>');  
     const movimientos = $('<div class="row bg-morado"></div>');
     const label = $('<div class="col-xs-12 bottom"><div class="col-xs-6"><h1 class="text-left">ÚLTIMOS MOVIMIENTOS</h1></div><div class="col-xs-6 text-right"><h1><img src="assets/icons/right-arrow-circular-button.png"></h1></div></div>');

@@ -3,7 +3,7 @@ body {
 }
 
 input[type="checkbox"] {
-/*    appearance: none;
+    /*    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;*/
     border: 1px solid #c8c6c6;
@@ -17,15 +17,21 @@ input[type="checkbox"] {
 .text-white {
     color: #fff;
 }
+
 .text-gris {
     color: #8f8f8f;
 }
+
 .text-turqueza {
     color: #00c3a3;
 }
 
 .mt {
-    margin-top: 10%;
+    margin-top: 30%;
+}
+
+.mt-15 {
+    margin-top: 15%;
 }
 
 .bg-yellow {

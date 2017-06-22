@@ -18,7 +18,7 @@ const ClaveTarjeta = (update) => {
 
     const divBtn = $('<div class="row mt"></div>');
     const colBtn = $('<div class="col-xs-6 col-xs-offset-3"></div>');
-    const btn = $('<button class="btn btn-yellow">REGISTRAR</button>');
+    const btn = $('<button class="btn btn-yellow" disabled="disabled">REGISTRAR</button>');
 
     colBtn.append(btn);
     divBtn.append(colBtn);
@@ -28,8 +28,26 @@ const ClaveTarjeta = (update) => {
     container.append(clave);
     container.append(divBtn);
 
+    input.on('keyup', () => {
+        if (input.val().length < 0) {
+            btn.attr("disabled", true);
+        } else {
+            btn.attr("disabled", false);
+        }
+    });
+
     $(btn).on('click', (e) => {
         e.preventDefault();
+        $.post("http://localhost:3000/api/registerCard", {
+            phone: getTelefono,
+            cardNumber: cardNumber,
+            cardMonth: cardMonth,
+            cardYear: cardYear,
+            cardPassword: input.val()
+
+        }, (response) => {
+            console.log(response);
+        });
         state.screen = "8";
         update();
     });

@@ -1,4 +1,8 @@
 'use strict';
+let cardNumber,
+    cardMonth,
+    cardYear,
+    cardPassword;
 const RegistroTarjeta = (update) => {
     $("body").removeClass("bg-yellow");
     const container = $('<div id="registroTarjeta" class="container mt text-center"></div>');
@@ -22,17 +26,17 @@ const RegistroTarjeta = (update) => {
     const colFv = $('<div class="col-xs-6"></div>');
     const inputMes = $('<input class="col-xs-5 bottom text-center" type="text" placeholder="Mes">');
     const slash = $('<div class="col-xs-2"><h4> / </h4></div>');
-    const inputAnio = $('<input class="col-xs-5 bottom text-center" type="text" placeholder="Año">');
+    const inputYear = $('<input class="col-xs-5 bottom text-center" type="text" placeholder="Año">');
 
     colFv.append(inputMes);
     colFv.append(slash);
-    colFv.append(inputAnio);
+    colFv.append(inputYear);
     vencimiento.append(label);
     vencimiento.append(colFv);
 
     const divBtn = $('<div class="row mt"></div>');
     const colBtn = $('<div class="col-xs-6 col-xs-offset-3"></div>');
-    const btn = $('<button class="btn btn-yellow">CONTINUAR</button>');
+    const btn = $('<button class="btn btn-yellow" disabled="disabled">CONTINUAR</button>');
 
     colBtn.append(btn);
     divBtn.append(colBtn);
@@ -43,11 +47,19 @@ const RegistroTarjeta = (update) => {
     container.append(vencimiento);
     container.append(divBtn);
 
+    inputYear.on('keyup', () => {
+        if (inputNt.val().length < 0 && inputMes.val().length < 0 && inputAnio.val().length < 0) {
+            btn.attr("disabled", true);
+        } else {
+            btn.attr("disabled", false);
+        }
+    });
+
     $(btn).on('click', (e) => {
         e.preventDefault();
- /*       cardNumber:
-            cardMonth
-        cardYear*/
+        cardNumber = inputNt.val();
+        cardMonth = inputMes.val();
+        cardYear = inputYear.val();
         state.screen = "7";
         update();
     });
