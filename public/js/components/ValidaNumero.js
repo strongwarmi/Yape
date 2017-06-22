@@ -1,5 +1,5 @@
 'use strict';
-let getTelefono = "";
+let getTelefono = "",getCode ="";
 const ValidaNumero = (update) => {
     const container = $('<div id="validaNumero" class="container mt text-center"></div>');
     const title = $('<div class="row"><img src="assets/icons/phone.png"><h1>Para comenzar validaremos tu número</h1><h2 class="text-gris">Recibirás un SMS con un código de validación</h2></div>');
@@ -53,6 +53,8 @@ const ValidaNumero = (update) => {
             {
               phone: input.val(),
               terms: "true"
+            },(response)=>{
+              getCode=response.data.code;
             });
         state.screen = "3";
         getTelefono = input.val();

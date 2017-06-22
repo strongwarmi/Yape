@@ -12,8 +12,6 @@ const ValidaCodigo = (update) => {
     const label = $('<h2 class="text-gris col-xs-6 text-right">Reintentar en <i class="glyphicon glyphicon-time"></i></h2>');
     const timer = $('<h2 id="timer" class="text-gris col-xs-6 text-left">21</h2>');
 
-    const btn = $('<button class="btn btn-yellow">CONTINUAR</button>');
-
     divInput.append(input);
     Code.append(icon);
     Code.append(divInput);
@@ -23,32 +21,33 @@ const ValidaCodigo = (update) => {
     container.append(title);
     container.append(divCode);
     container.append(divTimer);
-    container.append(btn);
 
-    setInterval(function(){
+  var repite =  setInterval(function(){
         var contador = parseInt(timer.text()),
             tiempo = setInterval(function(){
                     contador = contador-1;
-                    $("#timer").text(contador);
+                    timer.text(contador);
                         if(contador == -1){
                             clearInterval(tiempo);
                             timer.text(21);
+                            $.post("http://localhost:3000/api/resendCode",
+                                {
+                                  phone: getTelefono
+                                },(response)=>{
+                                  getCode=response.data;
+                                  console.log(getCode);
+                                  clearInterval(repite);
+                                });
                         }
             },1000);
     },1000);
 
     input.on('keyup',()=>{
-      if (input.val().length == 6) {
-
+      if (parseInt(input.val()) == getCode) {
+            repite= "";
             state.screen = "4";
             update();
       }
-    });
-
-    $(btn).on('click', (e) => {
-        e.preventDefault();
-        state.screen = "4";
-        update();
     });
 
     return container;
