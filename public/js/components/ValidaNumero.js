@@ -1,5 +1,6 @@
 'use strict';
-let getTelefono = "",getCode ="";
+let getTelefono = "",
+    getCode = "";
 const ValidaNumero = (update) => {
     const container = $('<div id="validaNumero" class="container mt text-center"></div>');
     const title = $('<div class="row"><img src="assets/icons/phone.png"><h1>Para comenzar validaremos tu número</h1><h2 class="text-gris">Recibirás un SMS con un código de validación</h2></div>');
@@ -16,18 +17,13 @@ const ValidaNumero = (update) => {
     const btn = $('<button class="btn btn-yellow" disabled="disabled">CONTINUAR</button>');
 
     divInput.append(input);
-
     Phone.append(icon);
     Phone.append(divInput);
-
     divPhone.append(Phone);
-
     divCheck.append(check);
     divCheck.append(label);
-
     colBtn.append(btn);
     divBtn.append(colBtn);
-
     container.append(title);
     container.append(divPhone);
     container.append(divCheck);
@@ -49,13 +45,12 @@ const ValidaNumero = (update) => {
 
     btn.on('click', (e) => {
         e.preventDefault();
-        $.post("http://localhost:3000/api/registerNumber",
-            {
-              phone: input.val(),
-              terms: "true"
-            },(response)=>{
-              getCode=response.data.code;
-            });
+        $.post("http://localhost:3000/api/registerNumber", {
+            phone: input.val(),
+            terms: "true"
+        }, (response) => {
+            getCode = response.data.code;
+        });
         state.screen = "3";
         getTelefono = input.val();
         update();
