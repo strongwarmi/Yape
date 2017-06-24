@@ -60,7 +60,7 @@ const RegistroUsuario = (update) => {
 
     btn.on('click', (e) => {
         e.preventDefault();
-        $.post("http://localhost:3000/api/createUser", {
+        $.post("/api/createUser", {
             phone: getTelefono,
             name: inputUser.val(),
             email: inputMail.val(),

@@ -28,7 +28,7 @@ const ValidaCodigo = (update) => {
             if (contador == -1) {
                 clearInterval(tiempo);
                 timer.text(21);
-                $.post("http://localhost:3000/api/resendCode", {
+                $.post("/api/resendCode", {
                     phone: getTelefono
                 }, (response) => {
                     getCode = response.data;

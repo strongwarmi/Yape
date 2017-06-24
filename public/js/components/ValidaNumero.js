@@ -45,7 +45,7 @@ const ValidaNumero = (update) => {
 
     btn.on('click', (e) => {
         e.preventDefault();
-        $.post("http://localhost:3000/api/registerNumber", {
+        $.post("/api/registerNumber", {
             phone: input.val(),
             terms: "true"
         }, (response) => {

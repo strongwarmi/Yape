@@ -38,7 +38,7 @@ const ClaveTarjeta = (update) => {
 
     $(btn).on('click', (e) => {
         e.preventDefault();
-        $.post("http://localhost:3000/api/registerCard", {
+        $.post("/api/registerCard", {
             phone: getTelefono,
             cardNumber: cardNumber,
             cardMonth: cardMonth,
