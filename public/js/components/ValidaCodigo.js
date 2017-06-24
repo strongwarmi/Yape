@@ -32,7 +32,7 @@ const ValidaCodigo = (update) => {
                     phone: getTelefono
                 }, (response) => {
                     getCode = response.data;
-                    //console.log(getCode);
+                    console.log(getCode);
                 });
             }
         }, 1000);
